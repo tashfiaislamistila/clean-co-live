@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = ({ children }) => {
     return (
         <div class="drawer drawer-end">
             <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col">
-                <div class="w-full navbar bg-base-300 px-20">
+                <div class="w-full navbar bg-base-100 px-20">
                     <div class="flex-1 px-2 mx-2 text-2xl">Clean Co.</div>
                     <div class="flex-none lg:hidden">
                         <label for="my-drawer-3" class="btn btn-square btn-ghost">
@@ -20,6 +20,13 @@ const Navbar = ({ children }) => {
                             <li><NavLink to='/services' className='rounded-lg'>Services</NavLink></li>
                             <li><NavLink to='/contact' className='rounded-lg'>Contact</NavLink></li>
                             <li><NavLink to='/login' className='rounded-lg'>Login</NavLink></li>
+                            <li class="dropdown dropdown-hover  dropdown-end">
+                                <label tabindex="0" class="btn btn-primary btn-outline  m-1 rounded-lg">Hover</label>
+                                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                    <li><a>Item 1</a></li>
+                                    <li><a>Item 2</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
